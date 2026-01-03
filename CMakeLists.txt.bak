@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-<<<<<<< HEAD
-project(ros2_hello_world)
-=======
 project(my_hello_package)
->>>>>>> c718dbe (Complete ROS2 Hello World assignment)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -13,15 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
-<<<<<<< HEAD
-# TODO: Add the executable target named 'hello_node'
-# 1. Add executable using src/hello_node.cpp
-# 2. Add dependencies (ament_target_dependencies) for rclcpp
-# 3. Install the target to the DESTINATION lib/${PROJECT_NAME}
-
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-=======
 add_executable(hello_node src/hello_node.cpp)
 target_include_directories(hello_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -44,7 +31,6 @@ if(BUILD_TESTING)
   # comment the line when this package is in a git repo and when
   # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
->>>>>>> c718dbe (Complete ROS2 Hello World assignment)
   ament_lint_auto_find_test_dependencies()
 endif()
 
